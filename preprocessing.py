@@ -19,7 +19,7 @@ for dirname, _, filenames in os.walk("C:/Users/singh/Downloads/archive (3)/TESS 
         label = filename.split('_')[-1]
         label = label.split('.')[0]
         audio_label.append(label.lower())
-    if len(paths) == 2800:
+    if len(audio_path) == 2800:
         break
 
 
@@ -92,7 +92,7 @@ waveform_plot(data, sampling_rate, emotion)
 spectogram_plot(data, sampling_rate, emotion)
 Audio(path)
 
-emotion = 'surprised'
+emotion = 'ps'
 path = np.array(df['audio'][df['label']==emotion])[0]
 data, sampling_rate = librosa.load(path)
 waveform_plot(data, sampling_rate, emotion)
