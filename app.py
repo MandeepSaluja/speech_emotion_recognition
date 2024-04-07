@@ -7,7 +7,7 @@ import numpy as np
 import os
 import sqlite3
 
-# Load the emotion recognition model
+
 model = load_model("C:/Users/singh/Downloads/speech_emotion_recognition.h5")
 
 import sqlite3
@@ -35,7 +35,7 @@ def extract_mfcc(audio_path):
 
 app = Flask(__name__)
 
-# Set path for uploading audio files
+
 UPLOAD_FOLDER = 'uploads'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
@@ -44,24 +44,6 @@ def predict_emotion(file):
     features = extract_mfcc(file)
     features = np.expand_dims(features, axis=0)  
     features = np.expand_dims(features, axis=-1)  
-    emotion_probabilities = model.predict(features)
-    emotion_label = np.argmax(emotion_probabilities)
-    emotions = ['angry', 'calm', 'disgust', 'fearful', 'happy', 'neutral', 'sad']
-    predicted_emotion = emotions[emotion_label]
-    return predicted_emotion
-
-
-app = Flask(__name__)
-
-# Set the path for uploading audio files
-UPLOAD_FOLDER = 'uploads'
-app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
-
-# Define the function to predict emotion from an uploaded audio file
-def predict_emotion(file):
-    features = extract_mfcc(file)
-    features = np.expand_dims(features, axis=0)
-    features = np.expand_dims(features, axis=-1)
     emotion_probabilities = model.predict(features)
     emotion_label = np.argmax(emotion_probabilities)
     emotions = ['angry', 'calm', 'disgust', 'fearful', 'happy', 'neutral', 'sad']
