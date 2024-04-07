@@ -1,6 +1,6 @@
 ## speech_emotion_recognition
 
-#Project Setup:
+Project Setup:
 #Create a virtual enviornment 
 python -m venv myenv
 
