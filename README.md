@@ -17,7 +17,7 @@ flask_sqlalchemy #Flask-SQLAlchemy is used to interact with an SQLite database t
 librosa #to extract features from the uploaded audio files, which are then used as input to the emotion recognition model 
 
 
-tensorflow \n
+tensorflow 
 
 
 #Dataset used: Toronto emotional speech set (TESS), Link: https://www.kaggle.com/datasets/ejlok1/toronto-emotional-speech-set-tess/data
