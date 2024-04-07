@@ -22,28 +22,6 @@ tensorflow
 
 #Dataset used: Toronto emotional speech set (TESS), Link: https://www.kaggle.com/datasets/ejlok1/toronto-emotional-speech-set-tess/data
 
-Emotions:
-Neutral:0
-
-
-Angry:1
-
-
-Disgust:2
-
-
-Fear:3
-
-
-Happy:4
-
-
-Sad:5
-
-
-Surprise:6
-
-
 
 #The format of the audio file is a WAV format
 
